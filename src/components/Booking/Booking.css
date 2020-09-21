@@ -1,0 +1,35 @@
+.booking-form{
+    width: 400px;
+    height: 350px;
+    border: 1px solid lightgray;
+    margin: 60px auto;
+    line-height: 35px;
+    padding:30px;
+}
+.label, select{
+    margin:0px;
+    display:flex;
+    justify-content:space-between;
+    width:340px;
+    
+    
+}
+.select{
+    background-color:lightgray;
+}
+
+.date input{
+    width:155px; 
+}
+.bk-btn{
+    margin-top: 15px;
+    outline: none;
+    text-align: center;
+}
+.form{
+    color: gray;
+}
+.booking {
+    width: 100%;
+}
+

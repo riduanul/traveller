@@ -1,0 +1,42 @@
+.login-form{
+    padding:20px;
+    border:2px solid lightgray;
+    width: 350px;
+    margin: auto;
+    margin-top: 40px;
+    text-align: center;
+    line-height: 35px;
+}
+.login-form input{
+    border:none;
+    border-bottom: 1px solid black;
+    width: 300px;
+    outline:none;
+}
+.login-form h6{
+    font-size: 20px;
+    font-weight: bolder;
+}
+.login-form a{
+    color: goldenrod;
+}
+
+.text{
+    text-align:center;
+    margin:2px;
+}
+.icon img{
+    width:20px;
+}
+.icon{
+    margin: 5px auto;
+    border:1px solid gray;
+    width:350px;
+    border-radius: 15px;
+    background:transparent;
+    
+}
+.icon button{
+    background-color:transparent;
+    border:none;
+}

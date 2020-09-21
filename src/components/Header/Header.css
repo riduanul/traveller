@@ -1,0 +1,38 @@
+.header{
+    z-index: 1;
+    background-color: transparent;
+    border-bottom: 1px solid lightgray;
+}
+.white-img {
+    filter:brightness(800%);
+    color: white;
+}
+.nav{
+    margin-left: 102px;
+}
+ .nav a {
+    text-decoration: none;
+    margin: 5px;
+    padding: 5px;
+    color: black;
+    
+}
+.searchButton input{
+    background-color: transparent;
+    margin-top:5px;
+    margin-left:80px;
+    width:300px;
+    border: 1.5px solid white;
+    color: white;
+}
+.button{
+    
+    border: 1px solid orange;
+    border-radius: 5px;
+    font-size: 15px;
+    height: 30px;
+    width: 100px;
+    background-color:orange
+}
+
+
