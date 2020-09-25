@@ -16,6 +16,7 @@
 .login-form h6{
     font-size: 20px;
     font-weight: bolder;
+    line-height: 50px;
 }
 .login-form a{
     color: goldenrod;

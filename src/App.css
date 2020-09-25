@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+.bg-color{
+  height: 10000px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  opacity: 0.50;
+  background-color: #000000;
+}
+.app{
+
+z-index: 2;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.bg-img{
+  font-family: 'Bebas Neue', cursive;
+  background-image: url("./resorces/Image/coxbazar.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 10000px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.9;
+}
+

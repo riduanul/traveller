@@ -1,86 +1,43 @@
-import React, { useState } from 'react';
+import React, { useContext, } from 'react';
 import './Home.css';
-import Carousel from 'react-bootstrap/Carousel'
-import sreemongol from '../../resorces/Image/Sreemongol.png';
-import sundorbon from '../../resorces/Image/sundorbon.png';
-import sajek from '../../resorces/Image/Sajek.png';
-import coxbazar from '../../resorces/Image/coxbazar.png';
+import { UserContext } from '../../App';
+import bg from '../../resorces/Image/coxbazar.png'
+import travelData from '../../resorces/travelData/travelData';
+import Destination from '../Destination/Destination';
 import { Link } from 'react-router-dom';
-
-
+import Header from '../Header/Header';
 
 
 const Home = () => {
-
+  const [loggedInUser, setLoggedInUser, locationInfo, setLocationInfo] = useContext(UserContext);
+    
+  function handleData (id){
+    const location = travelData.find(data => data.id === id);
+    setLocationInfo(location);
+  }
+  
    return (
-      
-      <div className=" bg">
-        <Carousel className='slider d-flex justify-content-between'>
-          <Carousel.Item interval={1000}>
-            <div className="row d-flex justify-content-between">
-                <div className="col-md-5 text">
-                  <h1>Coxbazar</h1>
-                  <p>Longest sea beach in the world</p><br/><br/>
-                  <Link to={'./booking/coxbazar'}><button className="btn btn-warning">Booking Now</button></Link>
-                </div>
-                <div className="col-md-6">
-                  <img
-                    className="d-block w-100"
-                    src={coxbazar}
-                    alt="First slide"
-                  />
-                </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item interval={1000}>
-            <div className="row d-flex justify-content-between">
-              <div className="col-md-5 text">
-                <h1>Shundorbon</h1>
-                <p>Largest Mangrove Forest in the world</p><br/><br/>
-                <Link to={'./booking/Sundorbon'}><button className="btn btn-warning">Booking Now</button></Link>
-              </div>
-            <div className="col-md-6 ">
-            <img
-              className="d-block w-100"
-              src={sundorbon}
-              alt="First slide"
-            />
+        
+        <div className="container-home">
+          <div className="white-img">
+          <Header ></Header>
+          </div>
+        <div className="row ">
+          <div className="col home-text">
+            <h1>{locationInfo.title}</h1>
+            <p>{locationInfo.desc}</p>
+            <Link to="./booking"><button className='btn btn-warning'>Booking</button></Link>
+          </div>
+          <div className="col-7 mr-3">
+            <div className="row">
+            {
+              travelData.map(data => <Destination handleData={handleData} location={data}></Destination>)
+            }
             </div>
           </div>
-          </Carousel.Item>
-          <Carousel.Item interval={1000}>
-            <div className="row d-flex justify-content-between">
-              <div className="col-md-5 text">
-                <h1>Sajek</h1>
-                <p>Natural beauty of Bangladesh</p><br/><br/>
-                <Link to={'./booking/sajek'}><button className="btn btn-warning">Booking Now</button></Link>
-              </div>
-              <div className="col-md-6">
-                <img
-                  className="d-block w-100"
-                  src={sajek}
-                  alt="First slide"
-                />
-              </div>
-            </div>
-          </Carousel.Item>
-          <Carousel.Item interval={1000}>
-            <div className="row d-flex justify-content-between">
-              <div className="col-md-5 text">
-                <h1>Sremongol</h1>
-                <p>Natural beauty of Bangladesh</p><br/><br/>
-                <Link to={'./booking/sajek'}><button className="btn btn-warning">Booking Now</button></Link>
-              </div>
-              <div className="col-md-6">
-                <img
-                  className="d-block w-100"
-                  src={sreemongol}
-                  alt="First slide"
-                />
-              </div>
-            </div>
-          </Carousel.Item>
-          </Carousel>
+          
+          </div>   
+      
       </div>
     );
 };

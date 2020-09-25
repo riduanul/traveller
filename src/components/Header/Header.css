@@ -3,10 +3,7 @@
     background-color: transparent;
     border-bottom: 1px solid lightgray;
 }
-.white-img {
-    filter:brightness(800%);
-    color: white;
-}
+
 .nav{
     margin-left: 102px;
 }

@@ -1,18 +1,27 @@
-.slider{
-    margin-top:100px;
-    display: flex;
-    justify-content: space-between;
+
+
+.home-text{
+    margin-top:180px;
+    margin-left: 155px;
+    color:white;
+
 }
-.text{
-    margin-top:200px;
-    margin-left:150px;
+.container-home{
+    background:url(../../resorces/Image/coxbazar.png);
+    width:100%;
+    height:100vh;
+    background-size:cover;
+    background-repeat:no-repeat;
+    position: relative;
+    background-color:linear-gradient(#ffffffd9,#2a3463a6);
+    z-index: 1;
+    opacity:3;
+    position: relative;
 }
-.bg{
-    /* background-image: url(../../resorces/Image/coxbazar.png); */
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100vh;
-}
+/* .white-img {
+    filter:brightness(800%)!important;
+    /* color: white; */
+    
 
 
 

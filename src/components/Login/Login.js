@@ -4,9 +4,11 @@ import googleIcon from '../../resorces/Icon/google.png';
 import fbIcon from '../../resorces/Icon/fb.png';
 import * as firebase from "firebase/app";
 import "firebase/auth";
-import { firebaseConfig } from './firebaseConfig';
+
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import {UserContext} from '../../App';
+import firebaseConfig from './firebaseConfig';
+import Header from '../Header/Header';
 
 firebase.initializeApp(firebaseConfig);
 
@@ -21,6 +23,7 @@ const Login = () => {
     confirmPassword:'',
     error:'',
     success:false,
+    passwordValid:'',
     
   })
 
@@ -44,6 +47,7 @@ const Login = () => {
     })
     .catch (err => {
       const error = err.message; 
+      console.log(error);
     })
   }
    const fbProvider = new firebase.auth.FacebookAuthProvider();
@@ -139,8 +143,11 @@ const Login = () => {
   
     return (
       <div>
+        <div>
+        <Header></Header>
+        </div>
           <div className="login-form">
-              {newUser ? <h6>Create Account</h6> :  <h6>Login</h6>  } <br/>
+              {newUser ? <h6>Create Account</h6> :  <h6>Login</h6>  } 
             {  
               newUser ?
               <form onSubmit={handleSubmit}>

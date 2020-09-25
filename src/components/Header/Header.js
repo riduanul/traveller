@@ -16,9 +16,9 @@ const Header = () => {
         <div className="header">
         <div className="d-flex">
             <div  className="img" >
-                <img 
+                <Link to="./home"><img 
                 className={`${condition && "white-img"}`}
-                src={Logo} width="100" alt="logo"/>
+                src={Logo} width="100" alt="logo"/></Link>
             </div>
             <div className="searchButton">
                 <input type="search" name="Search" placeholder="Search Your Destination"id=""/>

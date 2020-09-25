@@ -5,6 +5,7 @@ import booking2 from '../../resorces/Image/Rectangle 27.png';
 import booking3 from '../../resorces/Image/Rectangle 28.png';
 import star from '../../resorces/Icon/star_1_.png';
 import GoogleMap from '../GoogleMap/GoogleMap';
+import Header from '../Header/Header';
 
 
 
@@ -12,8 +13,12 @@ const BookingDetail = () => {
    
     return (
 
-        <div className="container">
-            <div className="row">
+        <div>
+            <div>
+                <Header></Header>
+            </div>
+            <div className="container">
+                <div className="row">
                 <div className="col-md-8  room">
                     <small>252 stays April-13-17 3guests</small>
                     <h5> Stay in Cox's Bazar</h5>
@@ -59,6 +64,7 @@ const BookingDetail = () => {
                     <h1>Google map</h1>
                     {/* <GoogleMap /> */}
                 </div>
+            </div>
             </div>
         </div>
     );
